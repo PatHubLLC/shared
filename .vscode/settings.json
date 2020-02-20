@@ -1,0 +1,33 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/.DS_Store": true,
+      "**/build/": true,
+      "**/__snapshots__/": true,
+      "default.realm.management/": true,
+      "realm-object-server/": true,
+      "*.realm.*": true,
+      "*.realm": true
+    },
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "javascript.validate.enable": false,
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/main.jsbundle": true,
+      "**/node_modules/**": true
+    },
+    "search.exclude": {
+      "*.lock": true,
+      "**/bower_components": true,
+      "**/main.jsbundle": true,
+      "**/node_modules": true
+    },
+    "editor.wordWrap": "bounded",
+    "editor.formatOnSave": true
+  }
+  
