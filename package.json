@@ -1,8 +1,20 @@
 {
+  "name": "pathub-shared",
+  "version": "0.0.1",
+  "description": "Shared library for internal use.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "PatHub LLC",
+  "license": "UNLICENSED",
   "devDependencies": {
     "import-sort-style-module": "^6.0.0",
     "prettier": "^1.19.1",
     "prettier-plugin-import-sort": "^0.0.3",
     "typescript": "^3.7.5"
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module"
+    }
   }
 }
