@@ -1,20 +1,20 @@
 import { IApplication } from './application';
 import { ITracking } from './tracking';
 
-interface BaseResponse {
+interface IBaseResponse {
   error?: string;
   result?: any;
 }
 
-export interface EmptyResponse extends BaseResponse {
+export interface IEmptyResponse extends BaseResponse {
   result: {};
 }
 
-export interface GetApplicationResponse extends BaseResponse {
+export interface IGetApplicationResponse extends BaseResponse {
   result: IApplication;
 }
 
-export interface LoginResponse extends BaseResponse {
+export interface ILoginResponse extends BaseResponse {
   result: {
     token: string;
   };
