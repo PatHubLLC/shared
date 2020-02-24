@@ -6,15 +6,15 @@ interface IBaseResponse {
   result?: any;
 }
 
-export interface IEmptyResponse extends BaseResponse {
+export interface IEmptyResponse extends IBaseResponse {
   result: {};
 }
 
-export interface IGetApplicationResponse extends BaseResponse {
+export interface IGetApplicationResponse extends IBaseResponse {
   result: IApplication;
 }
 
-export interface ILoginResponse extends BaseResponse {
+export interface ILoginResponse extends IBaseResponse {
   result: {
     token: string;
   };
@@ -44,6 +44,6 @@ export interface IGetBrowseResponse {
   result: Array<IGetBrowseShelf>;
 }
 
-export interface IGetTrackingsResponse extends BaseResponse {
+export interface IGetTrackingsResponse extends IBaseResponse {
   result: ITracking[];
 }
