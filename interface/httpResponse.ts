@@ -1,4 +1,4 @@
-import { IApplication } from './application';
+import { IApplication, IUsptoData } from './application';
 import { ITracking } from './tracking';
 
 interface IBaseResponse {
@@ -46,4 +46,8 @@ export interface IGetBrowseResponse {
 
 export interface IGetTrackingsResponse extends IBaseResponse {
   result: ITracking[];
+}
+
+export interface IUsptoDataResponse {
+  result: IUsptoData;
 }
