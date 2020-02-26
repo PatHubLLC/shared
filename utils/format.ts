@@ -1,5 +1,3 @@
-import moment from 'moment-timezone';
-
 // Convert "12345678" to something like "12/345,678"
 export function FormatApplicationId(applId?: string): string {
   if (!applId) return '';
@@ -23,22 +21,6 @@ export function FormatTitle(title: string): string {
   return title.replace('\n', ' ').replace(/\w\S*/g, function(txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
-}
-
-/**
- * Convert from response's string date time to human readable date time.
- * @param date "YYYY-MM-DDTHH:MM:SS"
- */
-export function FormatDate(date: string, isEST = false): string {
-  let mdate = moment(date);
-  if (isEST) {
-    mdate = mdate.tz('America/New_York');
-  }
-  return mdate.format('MMM DD, YYYY');
-}
-
-export function FormatDatetime(date: string): string {
-  return moment(date).format('MMM DD, YYYY h:SS A');
 }
 
 // Convert 10 digits phone number to (xxx) xxx-xxxx
