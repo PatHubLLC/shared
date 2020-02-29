@@ -41,7 +41,7 @@ export function ExtractLatestTransaction(application: IApplication): ITransactio
   return application.Transactions[length - 1];
 }
 
-export function extractApplicant(
+export function ExtractApplicant(
   application: IApplication,
   fallbackName = kOtherApplicantName,
 ): string {
