@@ -12,6 +12,6 @@
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "lib": ["ES2015"]
+    "lib": ["ES2015", "DOM"]
   }
 }

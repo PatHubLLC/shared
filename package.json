@@ -1,6 +1,6 @@
 {
   "name": "pathub-shared",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Shared library for internal use.",
   "keywords": [],
   "author": "PatHub LLC",
@@ -16,5 +16,7 @@
       "style": "module"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
