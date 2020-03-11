@@ -12,9 +12,15 @@ import * as logger from '../utils/logger';
 
 const BASE_URL = 'https://globaldossier.uspto.gov/';
 
+export interface DossierAgentConfig {
+  setCookie: boolean;
+}
+
 export class DossierAgent {
   private cookie: string = '';
   private searchUrl: string = '';
+
+  constructor(public config: DossierAgentConfig) {}
 
   private agent: AxiosInstance = axios.create({
     timeout: 10000, // 10s
@@ -35,11 +41,13 @@ export class DossierAgent {
       let searchResponse = searchResult.data;
 
       // Set cookies.
-      for (let cookie of searchResult.headers['set-cookie']) {
-        const cookieParts = cookie.split(' ');
-        this.agent.defaults.headers.cookie += cookieParts[0] + ' ';
+      if (this.config.setCookie) {
+        for (let cookie of searchResult.headers['set-cookie']) {
+          const cookieParts = cookie.split(' ');
+          this.agent.defaults.headers.cookie += cookieParts[0] + ' ';
+        }
+        this.cookie = this.agent.defaults.headers.cookie;
       }
-      this.cookie = this.agent.defaults.headers.cookie;
 
       if (searchResponse && searchResponse.list) {
         let preview: IDossierApplicationPreview | null = null;
@@ -84,6 +92,9 @@ export class DossierAgent {
   }
 
   public getCookie(): string {
+    if (!this.config.setCookie) {
+      logger.warn('setCookie config is set to false.');
+    }
     return this.cookie;
   }
 
