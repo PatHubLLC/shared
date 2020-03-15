@@ -1,6 +1,6 @@
 {
   "name": "pathub-shared",
-  "version": "0.0.17",
+  "version": "1.0.0",
   "description": "Shared library for internal use.",
   "keywords": [],
   "author": "PatHub LLC",
