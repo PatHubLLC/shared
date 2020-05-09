@@ -1,5 +1,5 @@
 {
-  "name": "pathub-shared",
+  "name": "shared",
   "version": "0.2.0",
   "description": "Shared library for internal use.",
   "keywords": [],
@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "axios": "^0.19.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
