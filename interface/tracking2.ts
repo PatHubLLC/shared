@@ -9,6 +9,6 @@ export interface ITracking2 {
   readonly createdAt?: string;
   readonly updatedAt?: string;
 
-  readonly Application?: IApplication;
+  readonly Application: IApplication;
   readonly List?: IList;
 }
