@@ -1,5 +1,6 @@
 import { IApplication, IUsptoData } from './application';
 import { IExaminer } from './examiner';
+import { IList } from './list';
 import { ITracking } from './tracking';
 
 interface IBaseResponse {
@@ -55,4 +56,8 @@ export interface IUsptoDataResponse {
 
 export interface IGetExaminerResponse {
   result: IExaminer[];
+}
+
+export interface IGetListsResponse {
+  result: IList[];
 }
