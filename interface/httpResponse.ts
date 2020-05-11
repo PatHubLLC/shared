@@ -2,6 +2,7 @@ import { IApplication, IUsptoData } from './application';
 import { IExaminer } from './examiner';
 import { IList } from './list';
 import { ITracking } from './tracking';
+import { ITracking2 } from './tracking2';
 
 interface IBaseResponse {
   error?: string;
@@ -58,6 +59,10 @@ export interface IGetExaminerResponse {
   result: IExaminer[];
 }
 
-export interface IGetListsResponse {
+export interface IGetListsResponse extends IBaseResponse {
   result: IList[];
+}
+
+export interface IGetTrackings2Response extends IBaseResponse {
+  result: ITracking2[];
 }
