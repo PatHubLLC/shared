@@ -59,6 +59,10 @@ export interface IGetExaminerResponse {
   result: IExaminer[];
 }
 
+export interface IGetListResponse extends IBaseResponse {
+  result: IList;
+}
+
 export interface IGetListsResponse extends IBaseResponse {
   result: IList[];
 }
