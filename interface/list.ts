@@ -3,12 +3,14 @@ import { ITracking2 } from './tracking2';
 import { IUser } from './user';
 
 export interface IList {
-  id: number;
-  title: string;
+  readonly id: number;
+  readonly title: string;
 
-  User?: Partial<IUser>;
-  Team?: Partial<ITeam>;
-  Trackings?: ITracking2[];
-  createdAt?: string;
-  updatedAt?: string;
+  readonly User?: Partial<IUser>;
+  readonly userId?: number;
+  readonly Team?: Partial<ITeam>;
+  readonly teamId?: number;
+  readonly Trackings?: ITracking2[];
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
 }
