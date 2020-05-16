@@ -10,7 +10,7 @@ export interface IList {
   userId?: number;
   Team?: Partial<ITeam>;
   teamId?: number;
-  Trackings?: ITracking2[];
+  Trackings2?: ITracking2[];
   createdAt?: string;
   updatedAt?: string;
 }

@@ -70,3 +70,7 @@ export interface IGetListsResponse extends IBaseResponse {
 export interface IGetTrackings2Response extends IBaseResponse {
   result: ITracking2[];
 }
+
+export interface IGenericGetResponse<T> extends IBaseResponse {
+  result: T;
+}
